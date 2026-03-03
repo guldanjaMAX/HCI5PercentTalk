@@ -14,6 +14,7 @@
 <meta name="keywords" content="high conflict keynote, workplace conflict speaker, BIFF Response, high conflict personality, Megan Hunter speaker, HR conference keynote, leadership keynote, conflict management speaker">
 <meta name="author" content="High Conflict Institute">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hci5percenttalk.pages.dev/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -26,6 +27,33 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The 5% Problem — Signature Keynote by Megan Hunter">
 <meta name="twitter:description" content="Why your hardest people cost you 50% of your time — and what to do about it. Book this talk for your next event.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "The 5% Problem: Signature Keynote by Megan Hunter",
+  "description": "Why your hardest people cost you 50% of your time. A 50 minute keynote with tools your audience will use the same afternoon.",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "organizer": {
+    "@type": "Organization",
+    "name": "High Conflict Institute",
+    "url": "https://highconflictinstitute.com"
+  },
+  "performer": {
+    "@type": "Person",
+    "name": "Megan Hunter",
+    "jobTitle": "CEO, High Conflict Institute",
+    "description": "International speaker, author of 4 books, and co-founder of High Conflict Institute with 18+ years of experience."
+  },
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "description": "Book this keynote for your next conference or leadership event"
+  }
+}
+</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -372,6 +400,10 @@ footer a:hover{text-decoration:underline}
   .step-time .mins{font-size:15px}
   .top-bar{padding:12px 20px}
 }
+
+/* Scroll Animations */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -795,6 +827,20 @@ footer a:hover{text-decoration:underline}
 <footer>
   &copy; 2026 <a href="https://www.highconflictinstitute.com" target="_blank">High Conflict Institute</a>. All rights reserved.
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.problem-card,.biff-card,.talk-step,.pattern-card,.booking-card,.section-label,h2').forEach(function(el){
+    el.classList.add('fade-up');
+  });
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}
+    });
+  },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.fade-up').forEach(function(el){observer.observe(el);});
+});
+</script>
 
 </body>
 </html>
