@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 5% Problem | High Conflict Institute Keynote</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hidden}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#024682 0%,#1a6b8a 40%,#4A8EA8 70%,#7DB8CE 100%);
+  color:#fff;padding:100px 24px 80px;text-align:center;position:relative;overflow:hidden
+}
+.hero::before{
+  content:'5%';position:absolute;font-size:clamp(200px,30vw,400px);font-weight:900;
+  opacity:0.04;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'Raleway',sans-serif;
+  pointer-events:none
+}
+.hero-label{
+  display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);
+  border-radius:100px;padding:6px 20px;font-size:12px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:24px;backdrop-filter:blur(4px)
+}
+.hero h1{
+  font-family:'Raleway',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:900;
+  line-height:1.1;max-width:800px;margin:0 auto 16px
+}
+.hero .subtitle{
+  font-size:clamp(18px,2.5vw,24px);font-weight:300;opacity:0.9;max-width:640px;margin:0 auto 40px;
+  line-height:1.5
+}
+.hero-stats{
+  display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px
+}
+.hero-stat{text-align:center}
+.hero-stat .num{font-family:'Raleway',sans-serif;font-size:42px;font-weight:900}
+.hero-stat .label{font-size:13px;opacity:0.8;margin-top:4px;max-width:140px}
+
+/* SECTIONS */
+.section{padding:80px 24px}
+.section-inner{max-width:900px;margin:0 auto}
+.section-label{
+  font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:#4A8EA8;margin-bottom:12px
+}
+.section h2{
+  font-family:'Raleway',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:800;
+  color:#024682;line-height:1.2;margin-bottom:20px
+}
+.section p{font-size:17px;line-height:1.7;color:#3a4a5a;margin-bottom:16px}
+
+/* THE PROBLEM */
+.problem-section{background:#f8fafb}
+.problem-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:32px
+}
+.problem-card{
+  background:#fff;border-radius:16px;padding:32px 24px;text-align:center;
+  border:1px solid #e8eef3;box-shadow:0 2px 12px rgba(0,0,0,0.04)
+}
+.problem-card .big-num{
+  font-family:'Raleway',sans-serif;font-size:48px;font-weight:900;
+  background:linear-gradient(135deg,#024682,#4A8EA8);-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;background-clip:text
+}
+.problem-card .desc{font-size:14px;color:#5a6a7a;margin-top:8px;line-height:1.5}
+
+/* TALK STRUCTURE */
+.talk-flow{margin-top:40px}
+.talk-step{
+  display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;
+  padding-left:80px
+}
+.talk-step::before{
+  content:'';position:absolute;left:35px;top:48px;bottom:-32px;width:2px;
+  background:linear-gradient(to bottom,#4A8EA8,#C5E1EC)
+}
+.talk-step:last-child::before{display:none}
+.step-time{
+  position:absolute;left:0;width:70px;height:70px;border-radius:50%;
+  background:linear-gradient(135deg,#024682,#4A8EA8);color:#fff;display:flex;
+  align-items:center;justify-content:center;flex-direction:column;flex-shrink:0
+}
+.step-time .mins{font-family:'Raleway',sans-serif;font-size:18px;font-weight:800}
+.step-time .unit{font-size:9px;text-transform:uppercase;letter-spacing:1px;opacity:0.8}
+.step-content h3{
+  font-family:'Raleway',sans-serif;font-size:20px;font-weight:700;color:#024682;margin-bottom:6px
+}
+.step-content p{font-size:15px;color:#5a6a7a;line-height:1.6}
+
+/* AUDIENCE */
+.audience-section{background:#f8fafb}
+.audience-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px
+}
+.audience-card{
+  background:#fff;border-radius:14px;padding:28px;border:1px solid #e8eef3;
+  box-shadow:0 2px 8px rgba(0,0,0,0.03)
+}
+.audience-card h4{
+  font-family:'Raleway',sans-serif;font-size:17px;font-weight:700;color:#024682;margin-bottom:8px
+}
+.audience-card p{font-size:14px;color:#5a6a7a;line-height:1.6}
+
+/* SPEAKER */
+.speaker-section{text-align:center}
+.speaker-img{
+  width:160px;height:160px;border-radius:50%;object-fit:cover;
+  border:4px solid #C5E1EC;margin:0 auto 24px;display:block
+}
+.speaker-name{font-family:'Raleway',sans-serif;font-size:28px;font-weight:800;color:#024682}
+.speaker-title{font-size:16px;color:#5a6a7a;margin-top:4px}
+.speaker-bio{
+  font-size:16px;line-height:1.7;color:#3a4a5a;max-width:640px;margin:20px auto 0;text-align:left
+}
+.speaker-credentials{
+  display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:28px
+}
+.credential{
+  background:#f0f6fa;border-radius:10px;padding:14px 24px;font-size:14px;
+  color:#024682;font-weight:500
+}
+
+/* CTA */
+.cta-section{
+  background:linear-gradient(135deg,#024682 0%,#1a6b8a 50%,#4A8EA8 100%);
+  color:#fff;text-align:center;padding:80px 24px
+}
+.cta-section h2{
+  font-family:'Raleway',sans-serif;font-size:clamp(28px,4vw,40px);font-weight:800;
+  color:#fff;margin-bottom:16px
+}
+.cta-section p{font-size:18px;opacity:0.9;max-width:560px;margin:0 auto 36px;line-height:1.6}
+.cta-btn{
+  display:inline-block;background:#fff;color:#024682;padding:16px 40px;
+  border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;
+  transition:all 0.3s;font-family:'Raleway',sans-serif
+}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.cta-secondary{
+  display:block;margin-top:16px;color:rgba(255,255,255,0.8);font-size:14px;text-decoration:none
+}
+.cta-secondary:hover{color:#fff}
+
+/* TOOLS BANNER */
+.tools-banner{background:#f8fafb;padding:60px 24px}
+.tools-inner{max-width:900px;margin:0 auto;text-align:center}
+.tools-inner h3{
+  font-family:'Raleway',sans-serif;font-size:22px;font-weight:700;color:#024682;margin-bottom:24px
+}
+.tools-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.tool-card{
+  background:#fff;border:1px solid #e8eef3;border-radius:12px;padding:20px 28px;
+  text-decoration:none;color:#024682;font-weight:600;font-size:14px;
+  transition:all 0.2s;display:flex;align-items:center;gap:8px
+}
+.tool-card:hover{border-color:#4A8EA8;box-shadow:0 4px 12px rgba(74,142,168,0.12);transform:translateY(-1px)}
+.tool-card svg{width:16px;height:16px;stroke:#4A8EA8}
+
+/* FOOTER */
+footer{
+  text-align:center;padding:40px 24px;font-size:13px;color:#7a8a9a;
+  border-top:1px solid #e8eef3
+}
+footer a{color:#4A8EA8;text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:600px){
+  .hero{padding:70px 20px 60px}
+  .hero-stats{gap:24px}
+  .hero-stat .num{font-size:32px}
+  .talk-step{padding-left:70px}
+  .step-time{width:56px;height:56px}
+  .step-time .mins{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Signature Keynote</div>
+  <h1>The 5% Problem</h1>
+  <p class="subtitle">Why Your Hardest People Cost You 50% of Your Time&mdash;And What to Do About It</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">5%</div>
+      <div class="label">of people generate half your conflict</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">$359B</div>
+      <div class="label">annual cost of workplace conflict in the US</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">25%</div>
+      <div class="label">of manager time spent resolving disputes</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="section problem-section">
+  <div class="section-inner">
+    <div class="section-label">The Hidden Cost</div>
+    <h2>Every Organization Has Them</h2>
+    <p>In every workplace, roughly 5% of people generate more than half of the complaints, grievances, and HR escalations. Not because they're having a bad month. Because they operate with a predictable, recognizable pattern that your current systems weren't designed to handle.</p>
+    <p>Your best managers are spending their most valuable hours managing your most difficult people. Your standard tools, open door policies, mediation, performance reviews, assume rational actors operating in good faith. High conflict personalities operate from a fundamentally different system.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="big-num">50%</div>
+        <div class="desc">of HR time consumed by conflict management and dispute resolution</div>
+      </div>
+      <div class="problem-card">
+        <div class="big-num">$3,600</div>
+        <div class="desc">per employee annually in conflict related absenteeism alone</div>
+      </div>
+      <div class="problem-card">
+        <div class="big-num">2x</div>
+        <div class="desc">more likely to quit within 12 months after experiencing workplace conflict</div>
+      </div>
+      <div class="problem-card">
+        <div class="big-num">49%</div>
+        <div class="desc">of workplace conflict stems from personality clashes, not systems failures</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THE AUDIENCE LEARNS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">What Your Audience Will Learn</div>
+    <h2>A Talk That Teaches, Not Sells</h2>
+    <p>This isn't a motivational speech with a pitch at the end. Your audience walks away with immediately usable tools they can apply the same afternoon. In 50 minutes, they'll learn to identify the pattern, de-escalate in real time, and understand why their current approaches aren't working.</p>
+    <div class="talk-flow">
+      <div class="talk-step">
+        <div class="step-time"><span class="mins">10</span><span class="unit">min</span></div>
+        <div class="step-content">
+          <h3>The Cost</h3>
+          <p>Open with compelling data and a real story that makes the problem feel urgent and expensive. Every leader in the room will recognize their own version of the 5%.</p>
+        </div>
+      </div>
+      <div class="talk-step">
+        <div class="step-time"><span class="mins">15</span><span class="unit">min</span></div>
+        <div class="step-content">
+          <h3>The Pattern</h3>
+          <p>Teach the four characteristics of high conflict personalities: preoccupation with blame, all or nothing thinking, unmanaged emotions, and extreme behaviors. This is the moment the audience says "that's exactly what I'm dealing with."</p>
+        </div>
+      </div>
+      <div class="talk-step">
+        <div class="step-time"><span class="mins">15</span><span class="unit">min</span></div>
+        <div class="step-content">
+          <h3>The Skill</h3>
+          <p>Teach the BIFF Response method completely: Brief, Informative, Friendly, Firm. The audience practices rewriting real examples. They leave with a tool they can use that afternoon.</p>
+        </div>
+      </div>
+      <div class="talk-step">
+        <div class="step-time"><span class="mins">5</span><span class="unit">min</span></div>
+        <div class="step-content">
+          <h3>The Vision</h3>
+          <p>Paint the picture of a Conflict Smart organization. Share the transformation story: one healthcare system reduced HR complaints by 40% and dropped turnover from 38% to 12%.</p>
+        </div>
+      </div>
+      <div class="talk-step">
+        <div class="step-time"><span class="mins">5</span><span class="unit">min</span></div>
+        <div class="step-content">
+          <h3>The Invitation</h3>
+          <p>No pitch. Offer three paths: a free Conflict Readiness Assessment for everyone, a no pressure discovery call for the curious, and annual partnership programs for decision makers ready to move.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IDEAL AUDIENCES -->
+<section class="section audience-section">
+  <div class="section-inner">
+    <div class="section-label">Perfect For</div>
+    <h2>Ideal Audiences &amp; Stages</h2>
+    <p>This keynote is designed for leadership and HR audiences who are actively managing the consequences of high conflict personalities, even if they don't have a name for the pattern yet.</p>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h4>HR Conferences</h4>
+        <p>SHRM state chapters, ASHHRA, IPMA-HR. HR professionals who spend their days managing the 5% and are hungry for a framework that actually works.</p>
+      </div>
+      <div class="audience-card">
+        <h4>Executive Peer Groups</h4>
+        <p>Vistage, YPO, EO chapters. CEOs and executives who recognize the outsized impact of high conflict individuals on their culture and bottom line.</p>
+      </div>
+      <div class="audience-card">
+        <h4>Industry Events</h4>
+        <p>Healthcare (ASHHRA, AONE), Education (AASA), Government (IPMA-HR), Legal (ABA). Sectors where conflict intensity is highest and the cost is most visible.</p>
+      </div>
+      <div class="audience-card">
+        <h4>Corporate Events</h4>
+        <p>Leadership offsites, management summits, annual meetings. Organizations investing in their leaders' ability to handle difficult people effectively.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section class="section speaker-section">
+  <div class="section-inner">
+    <div class="section-label">Your Speaker</div>
+    <h2 style="margin-bottom:32px">Megan Hunter, MBA</h2>
+    <img src="https://www.highconflictinstitute.com/wp-content/uploads/2021/08/MeganHsq-e1628009463594.jpg" alt="Megan Hunter" class="speaker-img">
+    <div class="speaker-name">Megan Hunter</div>
+    <div class="speaker-title">CEO &amp; Co-Founder, High Conflict Institute</div>
+    <p class="speaker-bio">Megan Hunter is the co-founder of the High Conflict Institute and a leading authority on high conflict personalities in the workplace. She has trained thousands of professionals across healthcare, government, education, and corporate settings on how to identify, manage, and de-escalate high conflict behavior. Her work combines two decades of research with practical, immediately applicable tools that transform how organizations handle their most challenging interpersonal dynamics.</p>
+    <div class="speaker-credentials">
+      <div class="credential">Co-founder, High Conflict Institute</div>
+      <div class="credential">Published Author</div>
+      <div class="credential">20+ Years in Conflict Resolution</div>
+      <div class="credential">Thousands Trained Globally</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Bring "The 5% Problem" to Your Event</h2>
+  <p>Give your audience tools they'll use the same afternoon. Available for keynotes, half day workshops, and virtual sessions.</p>
+  <a href="https://www.highconflictinstitute.com/custom-training/#consutation-form" target="_blank" class="cta-btn">Book Megan for Your Event</a>
+  <a href="mailto:megan@highconflictinstitute.com" class="cta-secondary">or email megan@highconflictinstitute.com</a>
+</section>
+
+<!-- TOOLS BANNER -->
+<section class="tools-banner">
+  <div class="tools-inner">
+    <h3>Explore More HCI Tools</h3>
+    <div class="tools-grid">
+      <a href="https://hciassessement.pages.dev/" target="_blank" class="tool-card">
+        Conflict Readiness Assessment
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <a href="https://hcicalculator.pages.dev/" target="_blank" class="tool-card">
+        Conflict Cost Calculator
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+      <a href="https://www.highconflictinstitute.com" target="_blank" class="tool-card">
+        High Conflict Institute
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 <a href="https://www.highconflictinstitute.com" target="_blank">High Conflict Institute</a>. All rights reserved.
+</footer>
+
+</body>
+</html>
