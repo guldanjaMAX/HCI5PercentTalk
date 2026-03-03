@@ -71,11 +71,17 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
   line-height:1.5
 }
 .hero-stats{
-  display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:20px
+  display:flex;justify-content:center;gap:48px;flex-wrap:wrap;margin-top:20px
 }
 .hero-stat{text-align:center}
 .hero-stat .num{font-family:'Raleway',sans-serif;font-size:42px;font-weight:900}
-.hero-stat .label{font-size:13px;opacity:0.8;margin-top:4px;max-width:140px}
+.hero-stat .label{font-size:13px;opacity:0.8;margin-top:4px;max-width:150px}
+.hero-cta{
+  display:inline-block;background:#fff;color:#024682;padding:16px 36px;
+  border-radius:12px;font-size:17px;font-weight:700;text-decoration:none;
+  transition:all 0.3s;font-family:'Raleway',sans-serif;margin-top:36px
+}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
 
 /* SECTIONS */
 .section{padding:80px 24px}
@@ -89,6 +95,15 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
   color:#024682;line-height:1.2;margin-bottom:20px
 }
 .section p{font-size:17px;line-height:1.7;color:#3a4a5a;margin-bottom:16px}
+
+/* CREDIBILITY STRIP */
+.cred-strip{
+  background:#024682;color:#fff;padding:40px 24px;text-align:center
+}
+.cred-strip-inner{max-width:900px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
+.cred-item{text-align:center}
+.cred-item .cred-num{font-family:'Raleway',sans-serif;font-size:32px;font-weight:900}
+.cred-item .cred-label{font-size:13px;opacity:0.8;margin-top:4px;max-width:160px}
 
 /* THE PROBLEM */
 .problem-section{background:#f8fafb}
@@ -105,6 +120,43 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
   -webkit-text-fill-color:transparent;background-clip:text
 }
 .problem-card .desc{font-size:14px;color:#5a6a7a;margin-top:8px;line-height:1.5}
+
+/* THE 4 PATTERNS */
+.pattern-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-top:32px
+}
+.pattern-card{
+  background:#fff;border-radius:14px;padding:28px 24px;
+  border:1px solid #e8eef3;box-shadow:0 2px 8px rgba(0,0,0,0.03);
+  border-top:4px solid #024682
+}
+.pattern-card .pattern-num{
+  font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;color:#4A8EA8;
+  margin-bottom:8px;text-transform:uppercase;letter-spacing:1px
+}
+.pattern-card h4{
+  font-family:'Raleway',sans-serif;font-size:18px;font-weight:700;color:#024682;margin-bottom:10px
+}
+.pattern-card p{font-size:14px;color:#5a6a7a;line-height:1.6}
+
+/* BIFF PREVIEW */
+.biff-section{background:#f8fafb}
+.biff-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px
+}
+.biff-card{
+  background:#fff;border-radius:14px;padding:24px 20px;text-align:center;
+  border:1px solid #e8eef3;box-shadow:0 2px 8px rgba(0,0,0,0.03)
+}
+.biff-letter{
+  font-family:'Raleway',sans-serif;font-size:48px;font-weight:900;
+  color:#024682;line-height:1
+}
+.biff-word{
+  font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#4A8EA8;
+  margin:8px 0
+}
+.biff-desc{font-size:13px;color:#5a6a7a;line-height:1.5}
 
 /* TALK STRUCTURE */
 .talk-flow{margin-top:40px}
@@ -128,6 +180,37 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
   font-family:'Raleway',sans-serif;font-size:20px;font-weight:700;color:#024682;margin-bottom:6px
 }
 .step-content p{font-size:15px;color:#5a6a7a;line-height:1.6}
+.step-content .step-detail{
+  font-size:13px;color:#7a8a9a;margin-top:8px;padding-left:16px;
+  border-left:3px solid #C5E1EC;line-height:1.6
+}
+
+/* WHY DIFFERENT */
+.diff-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px
+}
+.diff-card{background:#fff;border-radius:14px;padding:28px;border:1px solid #e8eef3}
+.diff-card h4{
+  font-family:'Raleway',sans-serif;font-size:17px;font-weight:700;color:#024682;margin-bottom:10px
+}
+.diff-card p{font-size:14px;color:#5a6a7a;line-height:1.6}
+
+/* RESULTS */
+.results-section{background:linear-gradient(135deg,#024682 0%,#1a6b8a 100%);color:#fff}
+.results-section .section-label{color:rgba(255,255,255,0.7)}
+.results-section h2{color:#fff}
+.results-section p{color:rgba(255,255,255,0.85)}
+.results-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:32px
+}
+.result-card{
+  background:rgba(255,255,255,0.1);border-radius:14px;padding:28px;
+  border:1px solid rgba(255,255,255,0.15);backdrop-filter:blur(4px)
+}
+.result-card .result-stat{
+  font-family:'Raleway',sans-serif;font-size:36px;font-weight:900;margin-bottom:8px
+}
+.result-card .result-context{font-size:15px;opacity:0.9;line-height:1.5}
 
 /* AUDIENCE */
 .audience-section{background:#f8fafb}
@@ -146,21 +229,59 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
 /* SPEAKER */
 .speaker-section{text-align:center}
 .speaker-img{
-  width:160px;height:160px;border-radius:50%;object-fit:cover;
-  border:4px solid #C5E1EC;margin:0 auto 24px;display:block
+  width:180px;height:180px;border-radius:50%;object-fit:cover;
+  border:5px solid #C5E1EC;margin:0 auto 24px;display:block;
+  box-shadow:0 8px 24px rgba(2,70,130,0.15)
 }
 .speaker-name{font-family:'Raleway',sans-serif;font-size:28px;font-weight:800;color:#024682}
 .speaker-title{font-size:16px;color:#5a6a7a;margin-top:4px}
 .speaker-bio{
-  font-size:16px;line-height:1.7;color:#3a4a5a;max-width:640px;margin:20px auto 0;text-align:left
+  font-size:16px;line-height:1.7;color:#3a4a5a;max-width:680px;margin:20px auto 0;text-align:left
 }
 .speaker-credentials{
-  display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:28px
+  display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:28px
 }
 .credential{
-  background:#f0f6fa;border-radius:10px;padding:14px 24px;font-size:14px;
-  color:#024682;font-weight:500
+  background:#f0f6fa;border-radius:10px;padding:12px 20px;font-size:13px;
+  color:#024682;font-weight:600
 }
+.co-founder-note{
+  max-width:680px;margin:32px auto 0;text-align:left;
+  background:#f8fafb;border-radius:14px;padding:24px 28px;border:1px solid #e8eef3
+}
+.co-founder-note h4{
+  font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#024682;margin-bottom:8px
+}
+.co-founder-note p{font-size:14px;color:#5a6a7a;line-height:1.6;margin:0}
+
+/* BOOKS */
+.books-grid{
+  display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:32px
+}
+.book-card{
+  background:#fff;border-radius:12px;padding:20px 24px;width:180px;text-align:center;
+  border:1px solid #e8eef3;box-shadow:0 2px 8px rgba(0,0,0,0.03)
+}
+.book-card .book-emoji{font-size:36px;margin-bottom:8px}
+.book-card .book-title{
+  font-family:'Raleway',sans-serif;font-size:13px;font-weight:700;color:#024682;line-height:1.4
+}
+
+/* FORMATS */
+.format-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px
+}
+.format-card{
+  background:#fff;border-radius:14px;padding:28px;border:1px solid #e8eef3;
+  box-shadow:0 2px 8px rgba(0,0,0,0.03)
+}
+.format-card h4{
+  font-family:'Raleway',sans-serif;font-size:17px;font-weight:700;color:#024682;margin-bottom:6px
+}
+.format-card .format-duration{
+  font-size:13px;font-weight:600;color:#4A8EA8;margin-bottom:10px
+}
+.format-card p{font-size:14px;color:#5a6a7a;line-height:1.6}
 
 /* CTA */
 .cta-section{
@@ -206,13 +327,17 @@ footer{
 footer a{color:#4A8EA8;text-decoration:none}
 footer a:hover{text-decoration:underline}
 
-@media(max-width:600px){
+@media(max-width:768px){
   .hero{padding:70px 20px 60px}
   .hero-stats{gap:24px}
   .hero-stat .num{font-size:32px}
+  .cred-strip-inner{gap:24px}
+  .cred-item .cred-num{font-size:24px}
+  .biff-grid{grid-template-columns:repeat(2,1fr)}
   .talk-step{padding-left:70px}
   .step-time{width:56px;height:56px}
   .step-time .mins{font-size:15px}
+  .top-bar{padding:12px 20px}
 }
 </style>
 </head>
@@ -221,12 +346,12 @@ footer a:hover{text-decoration:underline}
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="wordmark">HIGH CONFLICT INSTITUTE <span class="tagline">the missing peace</span></div>
-  <a href="https://www.highconflictinstitute.com">← Back to main site</a>
+  <a href="https://www.highconflictinstitute.com">&#8592; Back to main site</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-label">Signature Keynote</div>
+  <div class="hero-label">Signature Keynote &middot; 50 Minutes</div>
   <h1>The 5% Problem</h1>
   <p class="subtitle">Why Your Hardest People Cost You 50% of Your Time&mdash;And What to Do About It</p>
   <div class="hero-stats">
@@ -239,19 +364,42 @@ footer a:hover{text-decoration:underline}
       <div class="label">annual cost of workplace conflict in the US</div>
     </div>
     <div class="hero-stat">
-      <div class="num">25%</div>
-      <div class="label">of manager time spent resolving disputes</div>
+      <div class="num">2.8 hrs</div>
+      <div class="label">per employee per week lost to disputes</div>
     </div>
   </div>
+  <a href="#book" class="hero-cta">Book This Keynote</a>
 </section>
+
+<!-- CREDIBILITY STRIP -->
+<div class="cred-strip">
+  <div class="cred-strip-inner">
+    <div class="cred-item">
+      <div class="cred-num">500,000+</div>
+      <div class="cred-label">professionals trained globally through HCI programs</div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-num">20+</div>
+      <div class="cred-label">books published on high conflict behavior</div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-num">7</div>
+      <div class="cred-label">countries where HCI has delivered training</div>
+    </div>
+    <div class="cred-item">
+      <div class="cred-num">4M+</div>
+      <div class="cred-label">Psychology Today views on HCI research</div>
+    </div>
+  </div>
+</div>
 
 <!-- THE PROBLEM -->
 <section class="section problem-section">
   <div class="section-inner">
     <div class="section-label">The Hidden Cost</div>
     <h2>Every Organization Has Them</h2>
-    <p>In every workplace, roughly 5% of people generate more than half of the complaints, grievances, and HR escalations. Not because they're having a bad month. Because they operate with a predictable, recognizable pattern that your current systems weren't designed to handle.</p>
-    <p>Your best managers are spending their most valuable hours managing your most difficult people. Your standard tools, open door policies, mediation, performance reviews, assume rational actors operating in good faith. High conflict personalities operate from a fundamentally different system.</p>
+    <p>In every workplace, roughly 5% of people generate more than half of all complaints, grievances, and HR escalations. Not because they are having a bad month. Because they operate with a predictable, recognizable pattern that your current systems were never designed to handle.</p>
+    <p>Your best managers are spending their most valuable hours managing your most difficult people. The standard toolkit, open door policies, mediation sessions, performance improvement plans, assumes that everyone operates in good faith and can be reasoned with. High conflict personalities operate from a fundamentally different system. And until your leadership team can recognize the pattern, they will keep throwing rational solutions at irrational behavior.</p>
     <div class="problem-grid">
       <div class="problem-card">
         <div class="big-num">50%</div>
@@ -262,85 +410,210 @@ footer a:hover{text-decoration:underline}
         <div class="desc">per employee annually in conflict related absenteeism alone</div>
       </div>
       <div class="problem-card">
-        <div class="big-num">2x</div>
-        <div class="desc">more likely to quit within 12 months after experiencing workplace conflict</div>
+        <div class="big-num">60%</div>
+        <div class="desc">of managers have never received any conflict management training</div>
       </div>
       <div class="problem-card">
-        <div class="big-num">49%</div>
-        <div class="desc">of workplace conflict stems from personality clashes, not systems failures</div>
+        <div class="big-num">85%</div>
+        <div class="desc">of employees report experiencing some form of workplace conflict</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT THE AUDIENCE LEARNS -->
+<!-- THE FOUR PATTERNS -->
 <section class="section">
   <div class="section-inner">
-    <div class="section-label">What Your Audience Will Learn</div>
-    <h2>A Talk That Teaches, Not Sells</h2>
-    <p>This isn't a motivational speech with a pitch at the end. Your audience walks away with immediately usable tools they can apply the same afternoon. In 50 minutes, they'll learn to identify the pattern, de-escalate in real time, and understand why their current approaches aren't working.</p>
+    <div class="section-label">The Science Behind the 5%</div>
+    <h2>Four Predictable Characteristics</h2>
+    <p>Based on over two decades of clinical research and tens of thousands of case studies, the High Conflict Institute has identified four characteristics that define high conflict personalities. Once your audience learns to recognize these patterns, they will never unsee them.</p>
+    <div class="pattern-grid">
+      <div class="pattern-card">
+        <div class="pattern-num">Pattern 1</div>
+        <h4>Preoccupation with Blame</h4>
+        <p>They identify a "Target of Blame" and focus relentlessly on finding fault. The target is usually someone close to them or in a position of authority. They escalate through complaints, rumors, HR filings, or legal threats.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-num">Pattern 2</div>
+        <h4>All or Nothing Thinking</h4>
+        <p>Everything is black and white with no gray area. People are either allies or enemies. Situations are either perfect or disasters. There is no capacity for nuance, complexity, or compromise.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-num">Pattern 3</div>
+        <h4>Unmanaged Emotions</h4>
+        <p>Intense, unpredictable emotional outbursts that surprise colleagues. Fear, anger, yelling, disrespect that comes from nowhere. This creates a "walking on eggshells" environment that poisons team culture.</p>
+      </div>
+      <div class="pattern-card">
+        <div class="pattern-num">Pattern 4</div>
+        <h4>Extreme Behaviors</h4>
+        <p>Actions that 90% of people would never take. Disproportionate responses to minor issues. Behavior that escalates rather than resolves conflict. These actions damage professional reputations and organizational culture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE BIFF METHOD PREVIEW -->
+<section class="section biff-section">
+  <div class="section-inner">
+    <div class="section-label">The Tool Your Audience Takes Home</div>
+    <h2>The BIFF Response&reg; Method</h2>
+    <p>Developed by Bill Eddy, LCSW, JD over two decades of clinical and legal practice, the BIFF Response is now taught in law schools, ombudsman offices, family court systems, and corporate HR departments worldwide. It is the only communication framework designed specifically for high conflict interactions. Your audience will learn and practice it during the keynote and walk out ready to use it the same afternoon.</p>
+    <div class="biff-grid">
+      <div class="biff-card">
+        <div class="biff-letter">B</div>
+        <div class="biff-word">Brief</div>
+        <div class="biff-desc">Keep responses to 2 to 5 sentences, regardless of how long the hostile message was. Less is more with high conflict people.</div>
+      </div>
+      <div class="biff-card">
+        <div class="biff-letter">I</div>
+        <div class="biff-word">Informative</div>
+        <div class="biff-desc">Provide straight, factual information. No emotional reactions, no defending yourself. The issue is never about you.</div>
+      </div>
+      <div class="biff-card">
+        <div class="biff-letter">F</div>
+        <div class="biff-word">Friendly</div>
+        <div class="biff-desc">Open or close with a friendly statement. This disarms hostility without conceding ground. It also protects you if the exchange goes public.</div>
+      </div>
+      <div class="biff-card">
+        <div class="biff-letter">F</div>
+        <div class="biff-word">Firm</div>
+        <div class="biff-desc">End the conversation cleanly. Close the door to further hostile exchanges without being harsh. No openings for another round.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TALK STRUCTURE -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Inside the Keynote</div>
+    <h2>50 Minutes That Change How Your Leaders Handle Conflict</h2>
+    <p>This is not a motivational speech with a pitch at the end. It is a structured learning experience where your audience walks away with an immediately usable framework. In 50 minutes, they will learn to identify the pattern, understand why their current approaches fail, and gain a tool they can use the same afternoon.</p>
     <div class="talk-flow">
       <div class="talk-step">
         <div class="step-time"><span class="mins">10</span><span class="unit">min</span></div>
         <div class="step-content">
           <h3>The Cost</h3>
-          <p>Open with compelling data and a real story that makes the problem feel urgent and expensive. Every leader in the room will recognize their own version of the 5%.</p>
+          <p>Open with compelling data and a real story that makes the problem feel urgent, expensive, and personal. Every leader in the room will recognize their own version of the 5%.</p>
+          <div class="step-detail">Industry specific data on conflict costs. A story of one high conflict employee who cost an organization $2.1M in one year through turnover, lawsuits, and lost productivity. The realization that most organizations are bleeding money from a problem they have never named.</div>
         </div>
       </div>
       <div class="talk-step">
         <div class="step-time"><span class="mins">15</span><span class="unit">min</span></div>
         <div class="step-content">
           <h3>The Pattern</h3>
-          <p>Teach the four characteristics of high conflict personalities: preoccupation with blame, all or nothing thinking, unmanaged emotions, and extreme behaviors. This is the moment the audience says "that's exactly what I'm dealing with."</p>
+          <p>Teach the four characteristics of high conflict personalities. This is the moment the audience says "that is exactly what I am dealing with."</p>
+          <div class="step-detail">Preoccupation with blame, all or nothing thinking, unmanaged emotions, and extreme behaviors. Real anonymized examples from healthcare, corporate, and government settings. The key insight: these behaviors are not situational. They are a pattern. And once you can name the pattern, you can manage it.</div>
         </div>
       </div>
       <div class="talk-step">
         <div class="step-time"><span class="mins">15</span><span class="unit">min</span></div>
         <div class="step-content">
           <h3>The Skill</h3>
-          <p>Teach the BIFF Response method completely: Brief, Informative, Friendly, Firm. The audience practices rewriting real examples. They leave with a tool they can use that afternoon.</p>
+          <p>Teach the BIFF Response method completely. The audience practices rewriting real hostile messages. They leave with a tool they can use before the day is over.</p>
+          <div class="step-detail">Brief, Informative, Friendly, Firm. Live demonstration of transforming a hostile email into a BIFF Response. Audience participation: everyone rewrites a real example. The psychology behind why BIFF works when other approaches fail. Common mistakes and how to avoid them.</div>
         </div>
       </div>
       <div class="talk-step">
         <div class="step-time"><span class="mins">5</span><span class="unit">min</span></div>
         <div class="step-content">
           <h3>The Vision</h3>
-          <p>Paint the picture of a Conflict Smart organization. Share the transformation story: one healthcare system reduced HR complaints by 40% and dropped turnover from 38% to 12%.</p>
+          <p>Paint the picture of a Conflict Smart organization. What changes when an entire leadership team can recognize and respond to high conflict behavior.</p>
+          <div class="step-detail">A healthcare system that reduced HR complaints by 40% and dropped turnover from 38% to 12%. The concept of organizational conflict readiness. What it looks like when managers stop dreading difficult conversations and start handling them with confidence.</div>
         </div>
       </div>
       <div class="talk-step">
         <div class="step-time"><span class="mins">5</span><span class="unit">min</span></div>
         <div class="step-content">
           <h3>The Invitation</h3>
-          <p>No pitch. Offer three paths: a free Conflict Readiness Assessment for everyone, a no pressure discovery call for the curious, and annual partnership programs for decision makers ready to move.</p>
+          <p>No hard sell. Three clear paths forward based on where each audience member is in their journey.</p>
+          <div class="step-detail">Path 1: A free Conflict Readiness Assessment for every attendee. Path 2: A complimentary discovery call for organizations ready to explore. Path 3: Annual partnership programs for decision makers who want comprehensive training. Each attendee chooses their own next step.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IDEAL AUDIENCES -->
+<!-- WHY THIS TALK IS DIFFERENT -->
+<section class="section" style="background:#f8fafb">
+  <div class="section-inner">
+    <div class="section-label">For Event Planners</div>
+    <h2>Why This Talk Is Different</h2>
+    <p>Your attendees have sat through conflict talks before. They have heard the advice about "having crucial conversations" and "assuming positive intent." They are still struggling with the same people on Monday morning. Here is why this one sticks.</p>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <h4>Research Backed, Not Opinion Based</h4>
+        <p>Built on 20+ years of clinical and legal research with over 500,000 professionals trained globally. The BIFF method is taught at Pepperdine Law School and the University of Newcastle. This is not one person's philosophy. It is a validated framework.</p>
+      </div>
+      <div class="diff-card">
+        <h4>Immediately Actionable</h4>
+        <p>Your audience practices the BIFF Response during the keynote. They do not just hear about it. They use it. Most conflict talks give theory. This one gives a tool that works before lunch.</p>
+      </div>
+      <div class="diff-card">
+        <h4>Universal Recognition Moment</h4>
+        <p>When Megan describes the four patterns, something clicks for every leader in the room. They finally have a name for the behavior they have been trying to manage for years. That recognition alone changes how they approach their hardest people.</p>
+      </div>
+      <div class="diff-card">
+        <h4>No Pitch, All Value</h4>
+        <p>The invitation at the end offers free tools and optional next steps. Nothing is sold from the stage. Your attendees leave feeling served, not marketed to. That reflects well on you as the event organizer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROVEN RESULTS -->
+<section class="section results-section">
+  <div class="section-inner">
+    <div class="section-label">What Organizations Experience</div>
+    <h2>Results After HCI Training</h2>
+    <p>When organizations move from reactive conflict management to a proactive, skills based approach, the impact is measurable within months.</p>
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-stat">40%</div>
+        <div class="result-context">reduction in HR complaints within 12 months at a major healthcare system after implementing the BIFF framework across leadership</div>
+      </div>
+      <div class="result-card">
+        <div class="result-stat">250%</div>
+        <div class="result-context">average return on investment for organizations that invest in conflict resolution soft skills training programs</div>
+      </div>
+      <div class="result-card">
+        <div class="result-stat">30%</div>
+        <div class="result-context">improvement in workplace quality and a 50% decrease in conflict related costs documented in corporate training cohorts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE & STAGES -->
 <section class="section audience-section">
   <div class="section-inner">
     <div class="section-label">Perfect For</div>
     <h2>Ideal Audiences &amp; Stages</h2>
-    <p>This keynote is designed for leadership and HR audiences who are actively managing the consequences of high conflict personalities, even if they don't have a name for the pattern yet.</p>
+    <p>This keynote is designed for leadership and HR audiences who are actively managing the consequences of high conflict personalities, even if they do not have a name for the pattern yet.</p>
     <div class="audience-grid">
       <div class="audience-card">
         <h4>HR Conferences</h4>
-        <p>SHRM state chapters, ASHHRA, IPMA-HR. HR professionals who spend their days managing the 5% and are hungry for a framework that actually works.</p>
+        <p>SHRM state chapters, ASHHRA, IPMA-HR. HR professionals who spend their days managing the 5% and are hungry for a framework that actually works. This is the highest converting audience for HCI's approach.</p>
       </div>
       <div class="audience-card">
         <h4>Executive Peer Groups</h4>
-        <p>Vistage, YPO, EO chapters. CEOs and executives who recognize the outsized impact of high conflict individuals on their culture and bottom line.</p>
+        <p>Vistage, YPO, EO chapters. CEOs and executives who recognize the outsized impact of high conflict individuals on culture and bottom line. These leaders want tools, not theory.</p>
       </div>
       <div class="audience-card">
-        <h4>Industry Events</h4>
-        <p>Healthcare (ASHHRA, AONE), Education (AASA), Government (IPMA-HR), Legal (ABA). Sectors where conflict intensity is highest and the cost is most visible.</p>
+        <h4>Healthcare &amp; Education</h4>
+        <p>ASHHRA, AONE, AASA. Sectors where conflict intensity is highest and the cost is most visible. Healthcare organizations see some of the highest conflict related turnover in any industry.</p>
       </div>
       <div class="audience-card">
-        <h4>Corporate Events</h4>
-        <p>Leadership offsites, management summits, annual meetings. Organizations investing in their leaders' ability to handle difficult people effectively.</p>
+        <h4>Corporate Leadership Events</h4>
+        <p>Annual meetings, leadership offsites, management summits. Organizations investing in their leaders' ability to handle their most challenging interpersonal dynamics with skill and confidence.</p>
+      </div>
+      <div class="audience-card">
+        <h4>Legal Conferences</h4>
+        <p>ABA, state bar associations, family law sections. Attorneys and mediators who encounter high conflict personalities in every case and need a structured communication approach.</p>
+      </div>
+      <div class="audience-card">
+        <h4>Government &amp; Public Sector</h4>
+        <p>IPMA-HR, municipal leadership groups. Public sector organizations where conflict management is complicated by civil service protections and political dynamics.</p>
       </div>
     </div>
   </div>
@@ -354,20 +627,80 @@ footer a:hover{text-decoration:underline}
     <img src="https://www.highconflictinstitute.com/wp-content/uploads/2021/08/MeganHsq-e1628009463594.jpg" alt="Megan Hunter" class="speaker-img">
     <div class="speaker-name">Megan Hunter</div>
     <div class="speaker-title">CEO &amp; Co-Founder, High Conflict Institute</div>
-    <p class="speaker-bio">Megan Hunter is the co-founder of the High Conflict Institute and a leading authority on high conflict personalities in the workplace. She has trained thousands of professionals across healthcare, government, education, and corporate settings on how to identify, manage, and de-escalate high conflict behavior. Her work combines two decades of research with practical, immediately applicable tools that transform how organizations handle their most challenging interpersonal dynamics.</p>
+    <p class="speaker-bio">Megan Hunter co-founded the High Conflict Institute after spending 13 years in the family court system as a Family Law Specialist with the Arizona Supreme Court, where she saw firsthand how a small percentage of high conflict individuals could overwhelm entire systems. That frontline experience, combined with her MBA and two decades of organizational research, makes her uniquely qualified to translate complex behavioral science into practical, actionable tools that leaders can use immediately.</p>
+    <p class="speaker-bio">She has trained professionals across healthcare, government, education, law, and corporate settings in the United States and seven countries internationally. Her work with co-founder Bill Eddy, LCSW, JD has reached over 500,000 professionals worldwide and produced more than 20 published books on high conflict behavior. She brings warmth, clarity, and real world experience to every stage she steps on.</p>
     <div class="speaker-credentials">
-      <div class="credential">Co-founder, High Conflict Institute</div>
+      <div class="credential">CEO &amp; Co-Founder, HCI</div>
+      <div class="credential">13 Years in Family Law</div>
+      <div class="credential">MBA</div>
       <div class="credential">Published Author</div>
-      <div class="credential">20+ Years in Conflict Resolution</div>
-      <div class="credential">Thousands Trained Globally</div>
+      <div class="credential">500,000+ Professionals Trained</div>
+      <div class="credential">7 Countries</div>
+    </div>
+    <div class="co-founder-note">
+      <h4>The Research Foundation: Bill Eddy, LCSW, JD</h4>
+      <p>The frameworks taught in this keynote were developed by HCI co-founder Bill Eddy, who brings a rare combination of clinical social work (12+ years in psychiatric hospitals and outpatient clinics), family law practice (15+ years), and academic research (faculty at Pepperdine Law School and the University of Newcastle). His Psychology Today articles have been viewed over 4 million times. His book "5 Types of People Who Can Ruin Your Life" is the definitive guide to identifying and managing high conflict personalities. When Megan presents this material, she is drawing on one of the deepest bodies of research in the field.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLISHED WORK -->
+<section class="section" style="background:#f8fafb">
+  <div class="section-inner" style="text-align:center">
+    <div class="section-label">The Research Library</div>
+    <h2>Published Works by HCI Founders</h2>
+    <p style="max-width:640px;margin:0 auto 8px">The frameworks in this keynote are backed by an extensive body of published research and practical guides used by professionals worldwide.</p>
+    <div class="books-grid">
+      <div class="book-card">
+        <div class="book-emoji">&#128214;</div>
+        <div class="book-title">5 Types of People Who Can Ruin Your Life</div>
+      </div>
+      <div class="book-card">
+        <div class="book-emoji">&#128214;</div>
+        <div class="book-title">BIFF: Quick Responses to High Conflict People</div>
+      </div>
+      <div class="book-card">
+        <div class="book-emoji">&#128214;</div>
+        <div class="book-title">High Conflict People in Legal Disputes</div>
+      </div>
+      <div class="book-card">
+        <div class="book-emoji">&#128214;</div>
+        <div class="book-title">It's All Your Fault at Work!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Flexible Formats</div>
+    <h2>Available Delivery Options</h2>
+    <p>Whether you need a high impact keynote, a deep dive workshop, or a virtual session, Megan tailors the content to your audience, industry, and event format.</p>
+    <div class="format-grid">
+      <div class="format-card">
+        <h4>Signature Keynote</h4>
+        <div class="format-duration">50 minutes</div>
+        <p>The full 5% Problem experience. Data, pattern recognition, BIFF practice, and three clear paths forward. Perfect for conference main stages and annual meeting general sessions.</p>
+      </div>
+      <div class="format-card">
+        <h4>Half Day Workshop</h4>
+        <div class="format-duration">3 hours</div>
+        <p>Everything in the keynote plus extended BIFF practice, case study analysis, and team exercises. Your leaders leave with deeper skill and confidence. Ideal for leadership offsites.</p>
+      </div>
+      <div class="format-card">
+        <h4>Virtual Session</h4>
+        <div class="format-duration">60 to 90 minutes</div>
+        <p>Adapted for remote delivery with interactive polls, breakout exercises, and digital BIFF templates. The same high engagement experience, designed specifically for virtual platforms.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" id="book">
   <h2>Bring "The 5% Problem" to Your Event</h2>
-  <p>Give your audience tools they'll use the same afternoon. Available for keynotes, half day workshops, and virtual sessions.</p>
+  <p>Give your audience tools they will use the same afternoon. No fluff, no pitch, just a framework that changes how leaders handle their hardest people.</p>
   <a href="https://www.highconflictinstitute.com/custom-training/#consutation-form" target="_blank" class="cta-btn">Book Megan for Your Event</a>
   <a href="mailto:megan@highconflictinstitute.com" class="cta-secondary">or email megan@highconflictinstitute.com</a>
 </section>
