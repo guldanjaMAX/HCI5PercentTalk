@@ -105,6 +105,39 @@ body{font-family:'Roboto',sans-serif;color:#1a2a3a;background:#fff;overflow-x:hi
 .cred-item .cred-num{font-family:'Raleway',sans-serif;font-size:32px;font-weight:900}
 .cred-item .cred-label{font-size:13px;opacity:0.8;margin-top:4px;max-width:160px}
 
+/* TRUSTED BY LOGOS */
+.trusted-by{
+  background:#fff;padding:48px 24px 40px;text-align:center;border-bottom:1px solid #e8eef3
+}
+.trusted-by-label{
+  font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#7DA5C3;
+  font-weight:600;margin-bottom:28px
+}
+.trusted-logos-grid{
+  max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:32px 48px
+}
+.trusted-logos-grid .logo-item{
+  display:flex;align-items:center;justify-content:center;height:44px
+}
+.trusted-logos-grid .logo-item img{
+  max-height:40px;max-width:140px;object-fit:contain;
+  filter:grayscale(100%) opacity(0.55);transition:filter 0.3s ease
+}
+.trusted-logos-grid .logo-item img:hover{
+  filter:grayscale(0%) opacity(1)
+}
+.trusted-logos-grid .logo-text{
+  font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;
+  color:#a0b0c0;letter-spacing:0.5px;transition:color 0.3s ease
+}
+.trusted-logos-grid .logo-text:hover{color:#024682}
+@media(max-width:600px){
+  .trusted-logos-grid{gap:20px 32px}
+  .trusted-logos-grid .logo-item img{max-height:30px;max-width:110px}
+  .trusted-logos-grid .logo-text{font-size:12px}
+}
+
 /* THE PROBLEM */
 .problem-section{background:#f8fafb}
 .problem-grid{
@@ -390,6 +423,27 @@ footer a:hover{text-decoration:underline}
       <div class="cred-num">4M+</div>
       <div class="cred-label">Psychology Today views on HCI research</div>
     </div>
+  </div>
+</div>
+
+<!-- TRUSTED BY LOGOS -->
+<div class="trusted-by">
+  <div class="trusted-by-label">Trusted by Leading Organizations Worldwide</div>
+  <div class="trusted-logos-grid">
+    <div class="logo-item"><img src="images/logos/microsoft.svg" alt="Microsoft"></div>
+    <div class="logo-item"><span class="logo-text">Boston Children's Hospital</span></div>
+    <div class="logo-item"><span class="logo-text">U.S. Navy</span></div>
+    <div class="logo-item"><span class="logo-text">Progressive Insurance</span></div>
+    <div class="logo-item"><span class="logo-text">Duke Energy</span></div>
+    <div class="logo-item"><span class="logo-text">Scottish Parliament</span></div>
+    <div class="logo-item"><span class="logo-text">Israeli Knesset</span></div>
+    <div class="logo-item"><img src="images/logos/afcc.png" alt="AFCC"></div>
+    <div class="logo-item"><img src="images/logos/aaml.svg" alt="American Academy of Matrimonial Lawyers"></div>
+    <div class="logo-item"><img src="images/logos/ioa.png" alt="International Ombuds Association"></div>
+    <div class="logo-item"><span class="logo-text">Commonwealth Bank</span></div>
+    <div class="logo-item"><span class="logo-text">Denver Public Schools</span></div>
+    <div class="logo-item"><img src="images/logos/primo-brands.svg" alt="Primo Brands"></div>
+    <div class="logo-item"><span class="logo-text">Arizona State University</span></div>
   </div>
 </div>
 
